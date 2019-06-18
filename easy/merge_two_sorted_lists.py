@@ -28,39 +28,6 @@ class Solution:
                 current = node
                 
         return result
-        '''
-        if l1:    
-            merged_list = ListNode(l1.val) 
-            l1_next = l1.next
-            if l2:
-                current_merged_node = ListNode(l2.val)
-                l2_next = l2.next
-                merged_list.next = current_merged_node
-                current_node_list = 2
-            else:
-                return l1
-        else:
-            return l2
-        
-        while current_merged_node:
-            if current_node_list == 2:
-                if not l1_next:
-                    break
-                next_merged_node = ListNode(l1_next.val)
-                current_merged_node.next = next_merged_node
-                current_merged_node = next_merged_node
-                current_node_list = 1
-                l1_next = l1_next.next
-            elif current_node_list == 1:
-                if not l2_next:
-                    break
-                next_merged_node = ListNode(l2_next.val)
-                current_merged_node.next = next_merged_node
-                current_merged_node = next_merged_node
-                current_node_list = 2
-                l2_next = l2_next.next
-        '''       
-        #return merged_list 
 
 
 if __name__ == "__main__":
