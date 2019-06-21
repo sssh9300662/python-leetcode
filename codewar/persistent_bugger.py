@@ -1,21 +1,17 @@
 def persistence(n):
-    print("***********")
-    vals = str(n)
-    value = 1
+    def manipulate(strings, level):
+        value = 1
+        for string in strings:
+            value  = value  * int(string)
+        if value == int(strings):
+            return 0, level
+        level = level +1
+        return value, level
+    
     level = 0
     
-    for val in vals:
-        value  = value  * int(val)
-     
-    if value == int(vals):
-        print("!!!!")
-        return 0
-    else:
-        while(level>0):
-            print(value)
-            count = persistence(value)
-            print("################")
-            #print(count)
+    while(n>0):
+        n, level = manipulate(str(n), level)
             
     return level
 
