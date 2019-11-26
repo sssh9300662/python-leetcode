@@ -27,7 +27,6 @@ def solution(N, S, T):
         value = board[x][y]
         if value != "O":
             board[x][y] = str(ship_number)+hit
-        
        
     hit_ship_numbers = set()
             
